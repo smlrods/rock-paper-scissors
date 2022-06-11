@@ -1,4 +1,5 @@
-function computerPlay() {
+function computerPlay()
+{
     let randomNumber = Math.floor(Math.random()*3 + 1);
     if (randomNumber === 1) {
         return 'Rock';
@@ -11,7 +12,8 @@ function computerPlay() {
     }
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection)
+{
     playerSelection = playerSelection.toUpperCase();
     computerSelection = computerSelection.toUpperCase();
     /*
@@ -103,7 +105,8 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
+function game()
+{
     let scorePlayer = 0;
     let scoreComputer = 0;
     let playerSelection;
