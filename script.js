@@ -12,7 +12,7 @@ function computerPlay()
     }
 }
 
-function playRound(playerSelection, computerSelection)
+function playRound(playerSelection, computerSelection='rock')
 {
     playerSelection = playerSelection.toUpperCase();
     computerSelection = computerSelection.toUpperCase();
@@ -113,8 +113,8 @@ function game()
     let computerSelection;
     let result;
 
-    for (i = 0; i < 5; i++)
-    {
+    // for (i = 0; i < 5; i++)
+    // {
         console.log(`Round: ${i+1}`);
         playerSelection = prompt('Rock, Paper or Scissors?');
         computerSelection = computerPlay();
@@ -142,7 +142,7 @@ function game()
         {
             console.error('Error');
         }
-    }
+    // }
 
     if (scorePlayer > scoreComputer) 
     {
@@ -157,3 +157,14 @@ function game()
         console.log("It's a tie!");
     }
 }
+
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+
+const buttons = document.querySelectorAll('button');
+
+rock.addEventListener('click', () => playRound('rock', computerPlay()));
+paper.addEventListener('click', () => playRound('paper', computerPlay()));
+scissors.addEventListener('click', () => playRound('scissors', computerPlay()));
+
